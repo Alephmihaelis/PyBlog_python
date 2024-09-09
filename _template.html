@@ -11,6 +11,8 @@
     <!-- Define o ícone de favoritos -->
     <link rel="shortcut icon" href="/images/favicon.png">
 
+
+
     <!-- Título desta página -->
     <title>PyBlog .:. Pra entende de cobras.</title>
 </head>
@@ -28,6 +30,9 @@
                     PyBlog
                     <small>Pra quem entende de cobras</small>
                 </h1>
+                <span id="toggleMenu">
+                    <i class="fa-solid fa-bars fa-fw"></i>
+                </span>
             </a>
 
             <!-- formulário de busca -->
@@ -60,14 +65,16 @@
 
                 <h2>Título do artigo</h2>
 
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit odit, sint assumenda dolor quis,
+                <p class="justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit odit, sint assumenda dolor quis,
                     nulla eligendi, accusantium earum corporis modi facilis distinctio nisi tempore quidem sequi
                     asperiores consequatur suscipit non.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus alias reiciendis adipisci facilis
+                <p class="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus alias reiciendis adipisci facilis
                     pariatur quod molestiae officia distinctio? Fugiat deserunt dicta eveniet praesentium ullam odit,
                     tempore minus dignissimos quibusdam provident.</p>
+                    <div id="img">
                 <img src="https://picsum.photos/200/200" alt="Imagem aleatória">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus repellat, odio aut magnam
+                    </div>
+                <p class="justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus repellat, odio aut magnam
                     incidunt totam voluptatum reiciendis, laborum nisi modi vero illo quos impedit nihil quaerat
                     voluptate possimus ipsum laudantium.</p>
 
@@ -75,10 +82,20 @@
 
             <aside>
 
-                <h3>Veja também</h3>
+                <h3 class="center"><i class="fa-solid fa-plus fa-1x"></i> Veja também</h3>
 
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                <p>Repellendus asperiores aut voluptas architecto consequuntur.</p>
+                <p class="justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p class="justify">Repellendus asperiores aut voluptas architecto consequuntur.</p>
+
+                <div>
+
+                    <a href="https://facebook.com/pyblog" target="_blank"><i class="fa-brands fa-square-facebook fa-fw fa-3x" style="color: #1877f2"></i></a>
+                    <a href="https://linkedin.com/pyblog" target="_blank"><i class="fa-brands fa-linkedin fa-fw fa-3x" style="color: #b24020"></i></a>
+                    <a href="https://youtube.com/pyblog" target="_blank"><i class="fa-brands fa-youtube fa-fw fa-3x" style="color: #ff0000"></i></a>
+                    <a href="https://github.com/pyblog" target="_blank"><i class="fa-brands fa-github fa-fw fa-3x" style="color: #333"></i></a>
+
+                </div>
+
 
             </aside>
 
@@ -140,7 +157,13 @@
         <hr style="margin: .5rem; border: 1px solid transparent">
     </div>
 
+    <div id="fumaca">
+        
+    </div>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/template.js"></script>
 </body>
 
 </html>
