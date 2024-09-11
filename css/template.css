@@ -176,7 +176,6 @@ body {
 #wrap>nav {
     background-color: rgba(0, 0, 0, .9);
     display: flex;
-    /* align-items: center; */
     flex-direction: column;
     position: absolute;
     top: 9rem;
@@ -300,23 +299,38 @@ body {
  ***** Usando Media Queries             *****
  ********************************************/
 
-@media screen and (min-width: 575px) {
+@media screen and (min-width: 600px) {
 
-    /* altera o cabeçalho */
+    /* Altera o cabeçalho */
     #wrap>header {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
 
-    /* Altera o menu */
-    #wrap>nav a {
+    #wrap>nav {
         flex-direction: row;
+        justify-content: flex-end;
+        position: initial;
+        width: auto;
     }
 
-    #wrap>nav a i {
-        font-size: 1.2rem;
-        margin: 0 .35rem 0 0;
+    #wrap>nav a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        display: flex;
+        padding: 1rem;
+        transition: .2s;
+        border-bottom: 1px dotted grey;
+    }
+
+    #wrap>nav a:first-child {
+        margin-right: auto;
+    }
+
+    #toggleMenu,
+    #menuSmoke {
+        display: none;
     }
 }
 
@@ -341,15 +355,12 @@ body {
     text-align: center;
 }
 
-.justify {
-    text-align: justify;
-}
-
 .red {
     color: red;
 }
 
-#fumaca {
+
+#menuSmoke {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -358,10 +369,10 @@ body {
     z-index: 100;
 }
 
-#img {
-    text-align: center;
+.justify {
+    text-align: justify;
 }
 
-h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+#img {
+    text-align: center;
 }
