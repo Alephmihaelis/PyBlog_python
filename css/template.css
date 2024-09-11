@@ -386,3 +386,14 @@ aside ul :hover {
     cursor: pointer;
     text-decoration: underline;
 }
+
+#texto1, #texto2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+
+h2 {
+    font-family: fantasy;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+}
