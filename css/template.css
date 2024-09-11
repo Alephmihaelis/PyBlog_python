@@ -341,10 +341,13 @@ body {
     text-align: center;
 }
 
+.justify {
+    text-align: justify;
+}
+
 .red {
     color: red;
 }
-
 
 #fumaca {
     position: fixed;
@@ -353,4 +356,8 @@ body {
     background: rgba(0, 0, 0, .5);
     top: 9rem;
     z-index: 100;
+}
+
+#img {
+    text-align: center;
 }
