@@ -1,24 +1,21 @@
-function runApp() {
+$(document).ready(function() {
+    // Inicializa a aplicação quando o documento estiver pronto
+    runApp();
+});
 
-    /* Oculta o menu na inicialização */
+function runApp() {
+    // Ajusta o menu ao carregar a página
     resizeMenu();
 
-    /* Quando a janela for redimensionada chama resizeMenu() */
+    // Ajusta o menu ao redimensionar a janela
     $(window).resize(resizeMenu);
 
-    /* Quando do botão do menu for clicado chama a função toggleMenu() */
+    // Alterna a visibilidade do menu ao clicar no botão
     $('#toggleMenu').click(toggleMenu);
 }
 
 function resizeMenu() {
-
-    /*
-    Se a largura da tela é maior que 639px, exibe 0 nemu (showMenu)
-    e oculta o smoke (noSmoke = true).
-    Se não (else), sempre oculta o menu (hideMenu)
-
-    Resolve o dilerma da sanfona.
-    */
+    // Mostra ou esconde o menu com base na largura da janela
     if (window.innerWidth >= 600) {
         showMenu(true);
     } else {
@@ -27,33 +24,33 @@ function resizeMenu() {
 }
 
 function toggleMenu() {
-
+    // Alterna a visibilidade do menu ao clicar no botão
     if ($('#wrap>nav').is(':visible')) {
         hideMenu();
     } else {
         showMenu();
     }
-    return false;
+    return false; // Previne o comportamento padrão do clique
 }
 
-/* Exibe o menu */
 function showMenu(noSmoke) {
+    // Mostra o menu
     $('#wrap>nav').show('fast');
 
     if (noSmoke) {
+        // Esconde o fundo escuro e permite rolagem
         $('#menuSmoke').hide('fast');
+        $('body').css('overflow', 'auto');
     } else {
+        // Mostra o fundo escuro e desabilita rolagem
         $('#menuSmoke').show('fast');
+        $('body').css('overflow', 'hidden');
     }
-
-    $('body').css('overflow', 'hidden');
 }
 
-/* oculta o menu */
 function hideMenu() {
+    // Esconde o menu e o fundo escuro, permite rolagem
     $('#wrap>nav').hide('fast');
     $('#menuSmoke').hide('fast');
     $('body').css('overflow', 'auto');
 }
-
-$(document).ready(runApp);
